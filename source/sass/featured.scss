@@ -1,0 +1,234 @@
+.featured-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  background-color: $background-primary;
+  padding: 80px 0;
+}
+
+.featured-wrapper {
+  width: 100%;
+  padding: 30px;
+
+  .featured {
+    width: 100%;
+    background-color: $background-primary;
+    color: $foreground-white;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid $background-secondary;
+
+    .featured-content {
+      text-align: center;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      max-width: 320px;
+      margin: 0 auto;
+
+      h6,
+      p {
+        z-index: 5;
+        position: relative;
+      }
+      h6 {
+        font-size: 25px;
+      }
+      p {
+        font-size: 20px;
+      }
+
+      span {
+        position: absolute;
+        color: #1f1c27;
+        font-size: 150px;
+        font-weight: bold;
+        top: -80px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        z-index: 1;
+      }
+    }
+
+    .featured-img {
+      img {
+        width: 100%;
+        border-radius: 20px;
+      }
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  .featured-container {
+    gap: 10px;
+    padding: 20px 0;
+  }
+  .featured-wrapper {
+    .featured {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 50px;
+      max-width: 1200px;
+      margin: 0 auto;
+      .featured-content {
+        text-align: left;
+        width: 50%;
+        max-width: 55%;
+        margin: 0;
+
+        h6 {
+          font-size: 30px;
+        }
+        p {
+          font-size: 30px;
+        }
+
+        span {
+          font-size: 250px;
+          top: -150px;
+          left: 20%;
+        }
+      }
+
+      .featured-img {
+        img {
+          max-width: 500px;
+        }
+      }
+    }
+    .featured-right {
+      flex-direction: row-reverse;
+      .featured-content {
+        text-align: right;
+
+        span {
+          left: unset;
+          right: -20%;
+        }
+      }
+    }
+  }
+}
+
+.basic-featured-container {
+  display: flex;
+  width: 100%;
+  padding: 10px 20px;
+  flex-direction: column;
+  color: #fff;
+  gap: 10px;
+
+  h1 {
+    font-size: 20px;
+  }
+  .basic-featured {
+    border-bottom: 2px solid $background-secondary;
+    padding-bottom: 10px;
+    img {
+      width: 100%;
+      border-radius: 20px;
+    }
+
+    &-content {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+      padding: 20px 10%;
+      gap: 10px;
+      &-wrapper {
+        display: flex;
+        flex-direction: column;
+
+        .basic-featured-content-title {
+          h1 {
+            font-size: 30px;
+            color: yellow;
+          }
+          h1:last-child {
+            color: #fff;
+          }
+        }
+        span {
+          display: none;
+        }
+      }
+      p {
+        font-size: 14px;
+      }
+      button {
+        padding: 10px 30px;
+        border-radius: 20px;
+        background: yellow;
+        border: none;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  .basic-featured-container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .basic-featured {
+      display: flex;
+      width: 100%;
+      padding-bottom: 50px;
+      gap: 10px;
+      img {
+        width: 60%;
+      }
+
+      &-content {
+        align-items: flex-start;
+        text-align: left;
+
+        padding: 20px 10px 20px 5%;
+        width: 50%;
+        gap: 20px;
+        width: 380px;
+        &-wrapper {
+          flex-direction: row;
+          align-items: flex-start;
+          justify-content: space-between;
+          width: 100%;
+
+          span {
+            display: block;
+            font-weight: bold;
+            font-size: 16px;
+            padding-top: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .basic-featured-container {
+    .basic-featured {
+      &-content {
+        width: 420px;
+        &-wrapper {
+          .basic-featured-content-title {
+            h1 {
+              font-size: 40px;
+            }
+          }
+
+          span {
+            padding-top: 10px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@import "vars";
+@import "featured";
+@import "footer";
+@import "header";
+@import "hero";
+@import "card";
+@import "forms";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background: $background-primary;
+}
+
+.show-flex {
+  display: flex !important;
+}
+.show-block {
+  display: block !important;
+}
+.show-grid {
+  display: grid !important;
+}
